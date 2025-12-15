@@ -1,0 +1,234 @@
+================================================================================
+                    APPLICATION FLOW DIAGRAM
+                 Bakery Management System
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                         START APPLICATION                            │
+│                          BakeryApp.java                              │
+└─────────────────────────┬───────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                       LOGIN SCREEN                                   │
+│                   LoginController.java                               │
+│                                                                       │
+│  ┌─────────────────────────────────────────────────────────┐        │
+│  │  Username: [____________]                                │        │
+│  │  Password: [____________]                                │        │
+│  │                                                           │        │
+│  │           [ Login ]                                      │        │
+│  └─────────────────────────────────────────────────────────┘        │
+│                                                                       │
+│  Credentials: admin / admin123                                       │
+└──────────────┬────────────────────────────────────────┬─────────────┘
+               │                                        │
+        Invalid│                                Valid   │
+               │                                        │
+               ▼                                        ▼
+         [Error Message]              ┌─────────────────────────────────┐
+         Try Again                    │        HOME SCREEN              │
+                                      │     HomeController.java          │
+                                      │                                  │
+                                      │  ┌──────────┐  ┌──────────┐    │
+                                      │  │  Order   │  │ Manage   │    │
+                                      │  │   Now    │  │ Products │    │
+                                      │  └────┬─────┘  └────┬─────┘    │
+                                      │  ┌────┴─────┐  ┌────┴─────┐    │
+                                      │  │  Sales   │  │   Exit   │    │
+                                      │  │  Report  │  │          │    │
+                                      │  └────┬─────┘  └────┬─────┘    │
+                                      └───────┼─────────────┼──────────┘
+                                              │             │
+                ┌─────────────────────────────┼─────────────┼─────────────┐
+                │                             │             │             │
+                ▼                             ▼             ▼             ▼
+┌───────────────────────┐    ┌───────────────────────┐    │    ┌─────────────┐
+│   ORDER NOW SCREEN    │    │  MANAGE PRODUCTS      │    │    │ SALES REPORT│
+│ OrderController.java  │    │ProductController.java │    │    │SalesControl │
+│                       │    │                       │    │    │   ler.java  │
+│ ┌───────────────────┐ │    │ ┌───────────────────┐ │    │    │             │
+│ │  Product Table    │ │    │ │  Product Table    │ │    │    │ ┌─────────┐ │
+│ │  (View All)       │ │    │ │  (Click to Edit)  │ │    │    │ │ Total   │ │
+│ └───────────────────┘ │    │ └───────────────────┘ │    │    │ │ Sales   │ │
+│                       │    │                       │    │    │ └─────────┘ │
+│ Product ID: [___]    │    │ Product ID: [___]     │    │    │             │
+│ Quantity:   [___]    │    │ Name:       [___]     │    │    │ ┌─────────┐ │
+│                       │    │ Category:   [___]     │    │    │ │Products │ │
+│ [ Place Order ]      │    │ Price:      [___]     │    │    │ │  Sold   │ │
+│                       │    │ Quantity:   [___]     │    │    │ └─────────┘ │
+│      │                │    │                       │    │    │             │
+│      ▼                │    │ [ Add ] [ Update ]   │    │    │ ┌─────────┐ │
+│ ┌──────────────┐     │    │ [ Delete ] [ Clear ] │    │    │ │ Average │ │
+│ │ Confirmation │     │    │                       │    │    │ │  Sale   │ │
+│ │   Dialog     │     │    │      │   │   │       │    │    │ └─────────┘ │
+│ └──────┬───────┘     │    │      ▼   ▼   ▼       │    │    │             │
+│        ▼              │    │   ┌────────────┐     │    │    │ [ ← Back ]  │
+│  Update Stock         │    │   │ DataStore  │     │    │    └─────┬───────┘
+│  Update Sales         │    │   │   Update   │     │    │          │
+│                       │    │   └────────────┘     │    │          │
+│ [ ← Back ]            │    │                       │    │          │
+└───────┬───────────────┘    │ [ ← Back ]           │    │          │
+        │                    └───────┬───────────────┘    │          │
+        └────────────────────────────┴────────────────────┴──────────┘
+                                     │
+                                     ▼
+                           ┌───────────────────┐
+                           │   Back to HOME    │
+                           └───────────────────┘
+
+
+================================================================================
+                          DATA FLOW
+================================================================================
+
+┌─────────────────┐
+│  BakeryApp      │  Main Entry Point
+│  (Start)        │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  DataStore      │  Initialize (Singleton)
+│  getInstance()  │  Load products.dat
+│                 │  Load sales.dat
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Default        │  If no data found:
+│  Products       │  Create 8 sample products
+│  Initialize     │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────────────────────────────────────┐
+│              USER INTERACTIONS                   │
+│                                                  │
+│  Order → Update Stock → Update Sales → Save     │
+│  Add Product → Save to products.dat             │
+│  Update Product → Save to products.dat          │
+│  Delete Product → Save to products.dat          │
+│  View Sales → Read from sales.dat               │
+└──────────────────────────────────────────────────┘
+
+
+================================================================================
+                        CLASS STRUCTURE
+================================================================================
+
+Package: com.bakery.model
+┌─────────────────┐      ┌─────────────────┐
+│  Product        │      │  DataStore      │
+├─────────────────┤      ├─────────────────┤
+│ - productId     │      │ - products      │
+│ - productName   │◄─────│ - totalSales    │
+│ - category      │      │ - totalProdSold │
+│ - price         │      ├─────────────────┤
+│ - quantity      │      │ + getInstance() │
+├─────────────────┤      │ + getProducts() │
+│ + getters()     │      │ + addProduct()  │
+│ + setters()     │      │ + updateProduct │
+└─────────────────┘      │ + deleteProduct │
+                         │ + updateStock() │
+                         │ + addSale()     │
+                         └─────────────────┘
+
+Package: com.bakery.controller
+┌──────────────────┐   ┌──────────────────┐   ┌──────────────────┐
+│ LoginController  │   │  HomeController  │   │ OrderController  │
+├──────────────────┤   ├──────────────────┤   ├──────────────────┤
+│ + createScene()  │──►│ + createScene()  │──►│ + createScene()  │
+│ + validate()     │   │ + navigate()     │   │ + placeOrder()   │
+└──────────────────┘   └──────────────────┘   └──────────────────┘
+                              │
+                              ├──────────────────┐
+                              ▼                  ▼
+                    ┌──────────────────┐   ┌─────────────────┐
+                    │ProductController │   │SalesController  │
+                    ├──────────────────┤   ├─────────────────┤
+                    │ + addProduct()   │   │ + showStats()   │
+                    │ + updateProduct()│   │ + calculate()   │
+                    │ + deleteProduct()│   └─────────────────┘
+                    └──────────────────┘
+
+Package: com.bakery.app
+┌─────────────────┐
+│  BakeryApp      │
+├─────────────────┤
+│ + start()       │  Extends JavaFX Application
+│ + main()        │  Entry point
+└─────────────────┘
+
+
+================================================================================
+                      FILE STORAGE STRUCTURE
+================================================================================
+
+Application Directory
+│
+├── products.dat  (Binary file)
+│   └── List<Product> (Serialized)
+│       ├── Product 1
+│       ├── Product 2
+│       └── ...
+│
+└── sales.dat  (Binary file)
+    ├── totalSales (Double)
+    └── totalProductsSold (Integer)
+
+
+Auto-saved on every:
+- Add Product
+- Update Product
+- Delete Product
+- Place Order
+- Stock Update
+
+Auto-loaded on:
+- Application Start
+- DataStore Initialization
+
+
+================================================================================
+                          KEY FEATURES FLOW
+================================================================================
+
+PLACE ORDER:
+1. User selects Order Now
+2. Views product table
+3. Enters Product ID and Quantity
+4. Clicks Place Order
+5. System validates:
+   - Product exists?
+   - Sufficient stock?
+   - Valid quantity?
+6. Shows order summary
+7. User confirms
+8. Updates stock (product.quantity -= ordered)
+9. Updates sales (totalSales += amount, totalProductsSold += qty)
+10. Saves to files
+11. Refreshes table
+12. Shows success message
+
+MANAGE PRODUCTS:
+1. User selects Manage Products
+2. Views product list
+3. Can:
+   a. ADD: Fill form → Click Add → Validate → Save → Refresh
+   b. UPDATE: Select from table → Modify → Update → Save → Refresh
+   c. DELETE: Select from table → Delete → Confirm → Save → Refresh
+
+SALES REPORT:
+1. User selects Sales Report
+2. System reads from DataStore
+3. Calculates:
+   - Total Sales
+   - Total Products Sold
+   - Average Sale = Total Sales / Products Sold
+4. Displays in styled cards
+
+
+================================================================================
+                      END OF APPLICATION FLOW
+================================================================================

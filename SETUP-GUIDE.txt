@@ -1,0 +1,115 @@
+================================================================================
+                    BAKERY MANAGEMENT SYSTEM
+                        Quick Setup Guide
+================================================================================
+
+STEP 1: Download JavaFX SDK
+----------------------------
+1. Open your web browser
+2. Go to: https://gluonhq.com/products/javafx/
+3. Click "Download" for JavaFX Windows SDK (version 21 recommended)
+4. The file will be named something like: openjfx-21_windows-x64_bin-sdk.zip
+5. Download it to your Downloads folder
+
+STEP 2: Extract JavaFX
+-----------------------
+1. Locate the downloaded zip file in your Downloads folder
+2. Right-click → Extract All
+3. Extract to a temporary location
+4. You'll see a folder like: javafx-sdk-21
+5. Copy this entire folder to:
+   C:\Users\lahar\OneDrive\Desktop\Java\BakeryManagementSystem\
+
+Your structure should look like:
+   BakeryManagementSystem\
+   ├── javafx-sdk-21\
+   │   ├── lib\
+   │   │   ├── javafx.base.jar
+   │   │   ├── javafx.controls.jar
+   │   │   └── (other jar files)
+   │   └── legal\
+   ├── src\
+   ├── resources\
+   └── build.bat
+
+STEP 3: Verify Java Installation
+---------------------------------
+1. Open Command Prompt (Win + R, type "cmd", press Enter)
+2. Type: java -version
+3. You should see Java version 17 or higher
+4. If not, download JDK from: https://adoptium.net/
+
+STEP 4: Set JAVA_HOME (if needed)
+----------------------------------
+1. Press Win + R, type "sysdm.cpl", press Enter
+2. Click "Advanced" tab → "Environment Variables"
+3. Under "System Variables", click "New"
+4. Variable name: JAVA_HOME
+5. Variable value: C:\Program Files\Java\jdk-17 (adjust to your path)
+6. Click OK on all windows
+7. Restart Command Prompt
+
+STEP 5: Build the Application
+------------------------------
+1. Open Command Prompt
+2. Navigate to project folder:
+   cd C:\Users\lahar\OneDrive\Desktop\Java\BakeryManagementSystem
+3. Run: build.bat
+4. Wait for "BUILD SUCCESSFUL" message
+
+STEP 6: Run the Application
+----------------------------
+1. In the same Command Prompt, type: run.bat
+2. The application will start
+3. Login with:
+   Username: admin
+   Password: admin123
+
+================================================================================
+                        TROUBLESHOOTING
+================================================================================
+
+Problem: "JavaFX SDK not found"
+Solution: Make sure javafx-sdk-21 folder is directly inside 
+          BakeryManagementSystem folder, not in a subfolder
+
+Problem: "JAVA_HOME is not set"
+Solution: Follow Step 4 to set JAVA_HOME environment variable
+
+Problem: "javac is not recognized"
+Solution: Add Java bin folder to PATH environment variable
+          Usually: C:\Program Files\Java\jdk-17\bin
+
+Problem: Build fails with errors
+Solution: 
+  - Make sure you're using JDK 17 or higher
+  - Verify JavaFX SDK is correctly placed
+  - Check that all source files are present
+
+================================================================================
+                    CREATING WINDOWS EXE (OPTIONAL)
+================================================================================
+
+For a standalone executable that doesn't require setup:
+
+1. Complete Steps 1-5 above (build the application first)
+2. Run: create-exe.bat
+3. Wait for completion (may take a few minutes)
+4. Find installer in: package\BakeryManagementSystem-1.0.exe
+5. Install and run like any Windows application
+
+Note: This requires JDK 14 or higher with jpackage tool
+
+================================================================================
+                        QUICK LINKS
+================================================================================
+
+JavaFX Download:  https://gluonhq.com/products/javafx/
+Java JDK Download: https://adoptium.net/
+Project Location: C:\Users\lahar\OneDrive\Desktop\Java\BakeryManagementSystem
+
+================================================================================
+
+For more information, see README.md
+
+Happy Baking! 🍰

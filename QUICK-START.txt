@@ -1,0 +1,213 @@
+================================================================================
+                  BAKERY MANAGEMENT SYSTEM
+                      QUICK START GUIDE
+================================================================================
+
+🚀 FASTEST WAY TO GET STARTED (Using Maven)
+============================================
+
+If you have Maven installed:
+
+1. Open Command Prompt
+2. Navigate to project folder:
+   cd C:\Users\lahar\OneDrive\Desktop\Java\BakeryManagementSystem
+
+3. Build and run:
+   build-maven.bat
+   run-maven.bat
+
+4. Login:
+   Username: admin
+   Password: admin123
+
+DONE! ✓
+
+================================================================================
+
+📦 MANUAL SETUP (No Maven)
+===========================
+
+STEP 1: Download JavaFX
+-----------------------
+→ Go to: https://gluonhq.com/products/javafx/
+→ Download: JavaFX Windows SDK (version 21)
+→ Extract to: BakeryManagementSystem\javafx-sdk-21\
+
+STEP 2: Build & Run
+-------------------
+→ Double-click: build.bat
+→ Wait for "BUILD SUCCESSFUL"
+→ Double-click: run.bat
+
+STEP 3: Login
+-------------
+→ Username: admin
+→ Password: admin123
+
+DONE! ✓
+
+================================================================================
+
+🎯 WHAT TO DO NEXT
+==================
+
+1. LOGIN
+   - Use admin/admin123
+   - Try wrong password to see error handling
+
+2. EXPLORE HOME SCREEN
+   - 4 menu buttons
+   - Each leads to different feature
+
+3. TRY ORDER NOW
+   - See 8 default products
+   - Enter Product ID: 1
+   - Enter Quantity: 2
+   - Click Place Order
+   - Confirm order
+   - See stock updated!
+
+4. TRY MANAGE PRODUCTS
+   - Click on a product in table
+   - Form fills automatically
+   - Modify and click Update
+   - Or Add new product
+   - Or Delete selected product
+
+5. CHECK SALES REPORT
+   - View total sales from your orders
+   - See products sold count
+   - See average sale value
+
+6. EXIT
+   - Confirms before closing
+   - Data is saved automatically
+
+================================================================================
+
+📁 PROJECT FILES
+================
+
+src/
+├── com.bakery.app
+│   └── BakeryApp.java          ← Main application
+├── com.bakery.controller
+│   ├── LoginController.java    ← Login screen
+│   ├── HomeController.java     ← Dashboard
+│   ├── OrderController.java    ← Place orders
+│   ├── ProductController.java  ← Manage products
+│   └── SalesController.java    ← View reports
+└── com.bakery.model
+    ├── Product.java            ← Product data
+    └── DataStore.java          ← File storage
+
+resources/
+└── styles.css                  ← Beautiful UI styling
+
+================================================================================
+
+💡 TIPS
+=======
+
+✓ Data is saved automatically (products.dat, sales.dat)
+✓ App remembers all changes after restart
+✓ No internet needed
+✓ All screens have Back button
+✓ Error messages guide you
+✓ Confirmation dialogs prevent mistakes
+
+================================================================================
+
+🔧 IF SOMETHING GOES WRONG
+===========================
+
+Problem: "JavaFX not found"
+→ Download JavaFX SDK and place in correct folder
+
+Problem: "JAVA_HOME not set"
+→ Install JDK 17+ from https://adoptium.net/
+→ Set JAVA_HOME environment variable
+
+Problem: "Build failed"
+→ Check Java version: java -version (need 17+)
+→ Verify JavaFX folder structure
+
+Problem: Application won't start
+→ Run build.bat first
+→ Then run run.bat
+→ Check for error messages
+
+See SETUP-GUIDE.txt for detailed help!
+
+================================================================================
+
+📱 DEMO SEQUENCE FOR PRESENTATION
+==================================
+
+1. Show Login (1 min)
+   - Try wrong password
+   - Show validation
+   - Login successfully
+
+2. Show Home Screen (30 sec)
+   - Explain 4 features
+   - Nice UI design
+
+3. Order Now (2 min)
+   - Show product list
+   - Place order for Product ID: 1, Qty: 2
+   - Show confirmation
+   - Show stock updated in table
+
+4. Manage Products (2 min)
+   - Add new product: "Brownie", Cake, $5.99, 30
+   - Update existing product
+   - Delete a product (with confirmation)
+
+5. Sales Report (1 min)
+   - Show updated sales
+   - Show products sold
+   - Show average
+
+6. Exit (30 sec)
+   - Show confirmation dialog
+
+Total demo time: ~7 minutes
+
+================================================================================
+
+🎓 FOR YOUR COLLEGE PROJECT
+============================
+
+✓ Professional UI - Impresses professors
+✓ Complete features - Full CRUD operations
+✓ Clean code - Easy to explain
+✓ Good documentation - Shows your work
+✓ File storage - No database complexity
+✓ Working demo - Always runs smoothly
+
+Key Points to Mention:
+- JavaFX for modern UI
+- MVC architecture pattern
+- Object-oriented design
+- File-based persistence
+- Error handling
+- User-friendly interface
+
+================================================================================
+
+📞 NEED HELP?
+=============
+
+1. Read SETUP-GUIDE.txt (detailed setup)
+2. Read README.md (full documentation)
+3. Read PROJECT-SUMMARY.txt (overview)
+4. Read APPLICATION-FLOW.txt (how it works)
+
+All files are in the project folder!
+
+================================================================================
+
+                        ENJOY YOUR PROJECT! 🍰
+
+================================================================================

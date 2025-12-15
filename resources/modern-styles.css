@@ -1,0 +1,413 @@
+/* ========================================
+   PROFESSIONAL BAKERY MANAGEMENT SYSTEM
+   Ultra-Modern UI with Bakery Theme
+   ======================================== */
+
+/* Root Styling */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+    -fx-background: linear-gradient(135deg, #FFF8F0 0%, #FFE8D6 100%);
+    -fx-font-smoothing-type: lcd;
+}
+
+/* Main Container - Professional Gradient */
+.main-container {
+    -fx-background: linear-gradient(to bottom right, #FFF8F0, #FFE8D6, #FFDAB9);
+    -fx-background-radius: 0;
+}
+
+/* ========== MODERN CARD STYLING ========== */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: rgba(205, 164, 120, 0.3);
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 25, 0.2, 0, 5);
+    -fx-padding: 30;
+}
+
+.card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 35, 0.3, 0, 8);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-cursor: hand;
+}
+
+/* ========== TYPOGRAPHY ========== */
+.title-label {
+    -fx-font-size: 36px;
+    -fx-font-weight: 900;
+    -fx-text-fill: linear-gradient(to right, #8B4513, #D2691E);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 1);
+}
+
+.subtitle-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #8B6C5C;
+    -fx-opacity: 0.9;
+}
+
+.section-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #6B4423;
+}
+
+/* ========== PRIMARY BUTTON - PROFESSIONAL ========== */
+.primary-button {
+    -fx-background-color: linear-gradient(to bottom, #CD853F 0%, #8B4513 100%);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-background-radius: 12;
+    -fx-padding: 15 30 15 30;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(139, 69, 19, 0.4), 15, 0.3, 0, 4);
+    -fx-border-radius: 12;
+}
+
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #DAA520 0%, #CD853F 100%);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(139, 69, 19, 0.6), 20, 0.4, 0, 6);
+}
+
+.primary-button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #8B4513 0%, #654321 100%);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+    -fx-translate-y: 2;
+}
+
+/* ========== MENU BUTTON - LARGE CARDS ========== */
+.menu-button {
+    -fx-background-color: linear-gradient(135deg, #FFFFFF 0%, #FFF5EE 100%);
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #D2B48C;
+    -fx-border-width: 2;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 20, 0.25, 0, 5);
+    -fx-padding: 0;
+}
+
+.menu-button:hover {
+    -fx-background-color: linear-gradient(135deg, #FFF8DC 0%, #FFEFD5 100%);
+    -fx-border-color: #CD853F;
+    -fx-border-width: 3;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(205, 133, 63, 0.4), 30, 0.4, 0, 8);
+}
+
+.menu-button:pressed {
+    -fx-background-color: linear-gradient(135deg, #FFE4B5 0%, #FFDAB9 100%);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* ========== TEXT FIELDS - MODERN ========== */
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #D2B48C;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-padding: 12 15 12 15;
+    -fx-font-size: 15px;
+    -fx-text-fill: #4A4A4A;
+}
+
+.text-field:focused {
+    -fx-border-color: #CD853F;
+    -fx-border-width: 2.5;
+    -fx-background-color: #FFFAF0;
+    -fx-effect: dropshadow(gaussian, rgba(205, 133, 63, 0.3), 8, 0.2, 0, 0);
+}
+
+/* ========== COMBO BOX - MODERN ========== */
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #D2B48C;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-font-size: 15px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #CD853F;
+    -fx-effect: dropshadow(gaussian, rgba(205, 133, 63, 0.3), 8, 0.2, 0, 0);
+}
+
+.combo-box .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #4A4A4A;
+    -fx-padding: 10;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #FFF8DC;
+}
+
+/* ========== TABLE VIEW - PROFESSIONAL ========== */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-color: #D2B48C;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0.2, 0, 3);
+}
+
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to bottom, #CD853F, #B8860B);
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-font-size: 14px;
+    -fx-padding: 12;
+    -fx-border-width: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #CD853F;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #2C2C2C;
+    -fx-font-size: 14px;
+    -fx-padding: 10 12 10 12;
+    -fx-border-color: #F5F5F5;
+    -fx-alignment: CENTER-LEFT;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FFF8F0;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #FFE4B5;
+    -fx-text-fill: #2C2C2C;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #FFEFD5;
+}
+
+/* ========== SECONDARY BUTTON ========== */
+.secondary-button {
+    -fx-background-color: white;
+    -fx-text-fill: #8B4513;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 10;
+    -fx-border-color: #CD853F;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #FFF8DC;
+    -fx-border-color: #B8860B;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #FFE4B5;
+}
+
+/* ========== DANGER BUTTON ========== */
+.danger-button {
+    -fx-background-color: linear-gradient(to bottom, #DC143C, #B22222);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(220, 20, 60, 0.3), 12, 0.3, 0, 3);
+}
+
+.danger-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #FF1744, #DC143C);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* ========== FORM CONTAINER ========== */
+.form-container {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-color: rgba(205, 133, 63, 0.3);
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 20, 0.25, 0, 5);
+    -fx-padding: 25;
+}
+
+/* ========== PRODUCT CARD ========== */
+.product-card {
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-color: #E8D5C4;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0.2, 0, 4);
+    -fx-padding: 15;
+    -fx-cursor: hand;
+}
+
+.product-card:hover {
+    -fx-border-color: #CD853F;
+    -fx-border-width: 3;
+    -fx-effect: dropshadow(gaussian, rgba(205,133,63,0.3), 25, 0.35, 0, 6);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* ========== PRICE TAG ========== */
+.price-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #2E7D32;
+}
+
+.product-name-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #2C2C2C;
+}
+
+.category-badge {
+    -fx-background-color: #FFE4B5;
+    -fx-background-radius: 20;
+    -fx-padding: 5 15 5 15;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #8B4513;
+}
+
+/* ========== STATISTICS CARDS ========== */
+.stat-card {
+    -fx-background-color: linear-gradient(135deg, white 0%, #FFF8F0 100%);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 18, 0.25, 0, 4);
+    -fx-padding: 25;
+}
+
+.stat-value {
+    -fx-font-size: 42px;
+    -fx-font-weight: 900;
+}
+
+.stat-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #6B6B6B;
+}
+
+/* ========== SCROLL PANE ========== */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #CD853F;
+    -fx-background-radius: 10;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #B8860B;
+}
+
+/* ========== SUCCESS/ERROR MESSAGES ========== */
+.success-message {
+    -fx-background-color: #E8F5E9;
+    -fx-text-fill: #2E7D32;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 12 20 12 20;
+    -fx-background-radius: 8;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+}
+
+.error-message {
+    -fx-background-color: #FFEBEE;
+    -fx-text-fill: #C62828;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 12 20 12 20;
+    -fx-background-radius: 8;
+    -fx-border-color: #EF5350;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+}
+
+/* ========== BADGE ========== */
+.badge {
+    -fx-background-color: #CD853F;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-padding: 4 12 4 12;
+}
+
+/* ========== HOVER ANIMATIONS ========== */
+.animated-button {
+    -fx-transition: all 0.3s ease;
+}
+
+/* ========== PROFESSIONAL ALERTS ========== */
+.alert {
+    -fx-background-color: white;
+}
+
+.alert .header-panel {
+    -fx-background-color: linear-gradient(to right, #CD853F, #D2691E);
+}
+
+.alert .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-font-size: 18px;
+}
+
+.alert .content {
+    -fx-background-color: white;
+    -fx-padding: 25;
+}
+
+.alert .button {
+    -fx-background-color: #CD853F;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-weight: 600;
+    -fx-padding: 10 20 10 20;
+}
+
+.alert .button:hover {
+    -fx-background-color: #B8860B;
+}
