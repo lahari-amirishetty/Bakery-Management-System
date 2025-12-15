@@ -196,10 +196,9 @@ run.bat
 - **Full Features**: Complete CRUD operations and reporting
 - **Well-Commented**: Code includes helpful comments
 
-## 👨‍💻 Author
+👩‍💻 Designed By
 
-College Project - Bakery Management System
-Java + JavaFX
+Lahari Amirishetty
 
 ## 📄 License
 
