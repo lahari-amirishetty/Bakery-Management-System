@@ -1,5 +1,75 @@
 # 🍰 Bakery Management System
 
+> A professional, feature-rich JavaFX desktop application designed for bakery operations management. This project demonstrates full-stack development skills including UI design, data persistence, and software architecture.
+
+[![Java](https://img.shields.io/badge/Java-17%2B-orange?style=flat-square)](https://www.oracle.com/java/)
+[![JavaFX](https://img.shields.io/badge/JavaFX-21-blue?style=flat-square)](https://gluonhq.com/products/javafx/)
+[![License](https://img.shields.io/badge/License-Educational-green?style=flat-square)](LICENSE)
+
+## 📋 Table of Contents
+- [Project Overview](#project-overview)
+- [Technical Stack](#technical-stack)
+- [Key Features](#key-features)
+- [Getting Started](#getting-started)
+- [Usage Guide](#usage-guide)
+- [Architecture & Design](#architecture--design)
+- [Learning Outcomes](#learning-outcomes)
+
+## 🎯 Project Overview
+
+This Bakery Management System is a complete desktop application built as a portfolio project to showcase:
+- **Object-Oriented Design Principles**
+- **GUI Development** with JavaFX
+- **Data Persistence** and File Management
+- **CRUD Operations** Implementation
+- **User Authentication** and Authorization
+- **Software Engineering Best Practices**
+
+## 💻 Technical Stack
+
+| Technology | Version | Purpose |
+|---|---|---|
+| Java | 17+ | Core Language |
+| JavaFX | 21 | UI Framework |
+| CSS | 3 | Styling |
+| File I/O | - | Data Persistence |
+| Maven | 3.6+ | Build Tool (Optional) |
+
+## ✨ Key Features
+
+### 1. **Authentication System**
+- Secure login with username/password
+- Default credentials: `admin/admin123`
+- User session management
+
+### 2. **Inventory Management**
+- Add, update, and delete bakery products
+- Real-time stock tracking
+- Product categorization and pricing
+
+### 3. **Order Processing**
+- Intuitive order placement interface
+- Automatic stock deduction
+- Order confirmation and tracking
+
+### 4. **Sales Analytics**
+- Revenue reporting
+- Product performance metrics
+- Sales history tracking
+
+### 5. **Data Persistence**
+- File-based storage (no database setup required)
+- Automatic data serialization
+- Data integrity checks
+
+### 6. **Professional UI**
+- Modern, responsive design
+- Bakery-themed aesthetic
+- Intuitive navigation
+
+
+# 🍰 Bakery Management System
+
 A modern, JavaFX-based desktop application for managing bakery operations including inventory, orders, and sales tracking.
 
 ## ✨ Features
@@ -207,3 +277,65 @@ This is a college project for educational purposes.
 ---
 
 **Enjoy your Bakery Management System! 🍰**
+
+
+## 🏗️ Architecture & Design
+
+### MVC Architecture
+The application follows the Model-View-Controller pattern:
+- **Model**: Data structures and business logic
+- **View**: JavaFX UI components and layouts
+- **Controller**: Event handling and data binding
+
+### Class Hierarchy
+```
+BakeryApp (Main Entry Point)
+├── Controller Layer
+│   ├── LoginController
+│   ├── HomeController
+│   ├── OrderController
+│   ├── ProductController
+│   └── SalesController
+├── Model Layer
+│   ├── Product (Data Model)
+│   ├── Order (Data Model)
+│   └── DataStore (Persistence Layer)
+└── UI Components
+    └── FXML Layouts
+```
+
+## 🔍 Learning Outcomes
+
+This project helped develop skills in:
+- ✅ **GUI Programming**: Building responsive desktop applications
+- ✅ **Object-Oriented Programming**: Clean, maintainable code structure
+- ✅ **Data Management**: File I/O and data serialization
+- ✅ **Software Design**: MVC pattern implementation
+- ✅ **Error Handling**: Robust exception management
+- ✅ **Version Control**: Git workflow and collaboration
+- ✅ **Testing**: Manual testing and validation
+
+## 📚 Additional Resources
+
+- [JavaFX Documentation](https://gluonhq.com/products/javafx/)
+- [Java OOP Concepts](https://docs.oracle.com/javase/tutorial/java/concepts/)
+- [File I/O in Java](https://docs.oracle.com/javase/tutorial/i18n/resbundle/)
+- [Desktop Application Development Best Practices](https://en.wikipedia.org/wiki/Application_software)
+
+## 🙋 Acknowledgments
+
+- Project developed as part of college curriculum
+- Inspired by real-world bakery management needs
+- Built with best practices in software engineering
+
+## ✉️ Contact & Social
+
+- **GitHub**: [@lahari-amirishetty](https://github.com/lahari-amirishetty)
+- **Email**: [LinkedIn/Email for opportunities]
+- **Portfolio**: [Your portfolio website]
+
+---
+
+**Made with ❤️ by Lahari Amirishetty**
+
+*"Building professional solutions through clean code and creative problem-solving."*
